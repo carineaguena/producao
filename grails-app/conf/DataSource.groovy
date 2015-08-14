@@ -8,11 +8,11 @@ dataSource {
 hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = false
+	dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'
 //    cache.region.factory_class = 'org.hibernate.cache.SingletonEhCacheRegionFactory' // Hibernate 3
 //    cache.region.factory_class = 'org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory' // Hibernate 4
-    singleSession = true // configure OSIV singleSession mode
-    flush.mode = 'manual' // OSIV session flush mode outside of transactional context
-	dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'
+//    singleSession = true // configure OSIV singleSession mode
+//    flush.mode = 'manual' // OSIV session flush mode outside of transactional context
 }
 
 // environment specific settings
@@ -21,20 +21,22 @@ environments {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-			url = jdbc:mysql://localhost:3306/producao
+			url = "jdbc:mysql://localhost:3306/producao"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            //url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+			url = "jdbc:mysql://localhost:3306/producao"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            properties {
+            //url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            url = "jdbc:mysql://localhost:3306/producao"
+			properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
                initialSize = 5
