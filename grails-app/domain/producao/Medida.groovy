@@ -6,7 +6,7 @@ class Medida {
 	String tipo
 	
 	String toString(){
-		this.descricao
+		this.tipo
 	}
 
     static constraints = {
