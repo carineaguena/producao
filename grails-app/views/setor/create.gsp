@@ -6,7 +6,6 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<div class="page-header"><h1>Sistema de Produção</h1></div>
 		<div class="nav" role="navigation">
 			<ul class="nav nav-tabs nav-justified">
 				<li role="presentation" class="active"><a class="home" href="${createLink(uri: '/')}"><span class="icon icon-home" aria-hidden="true"></span> <g:message code="default.home.label"/></a></li>

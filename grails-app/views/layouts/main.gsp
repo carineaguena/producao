@@ -25,6 +25,44 @@
             
 	</head>
 	<body>
+            
+            <div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
+            
+            <div class="page-header"><h1>Sistema de Produção</h1></div>
+            <div class="login-header"> <span class="icon icon-user" aria-hidden="true"></span> <g:loginControl /> </div>
+              
 		<g:layoutBody/>
+                
+          
+                      
+                                    	
+                    <div class="panel-footer" style="margin-top:100px;">
+                            <a href="http://www.camboriu.ifc.edu.br">
+                        	<img style="margin-top:10px; width: 10%; padding:0px; border:0px;" src="http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/img/etiqueta_rodape2.png" />
+                            </a>
+                        
+                        
+                            <img width="195" height="80" alt="" style="margin-top:60px; float: right;" src="http://www.camboriu.ifc.edu.br/wp-content/uploads/2014/09/BrancoH_80px.jpg" />
+                        
+                       
+                            <h4>Endereço</h4>			
+                            
+                            <p>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA CATARINENSE - CÂMPUS CAMBORIÚ<br />
+                            RUA JOAQUIM GARCIA S/N - CAIXA POSTAL Nº 2016 - CEP 88340-055 - CAMBORIÚ - SC<br />
+                            TELEFAX: (47) 2104-0800 - E-mail: ifc@ifc-camboriu.edu.br</p>
+                           
+                      
+                                           
+                    </div>
+                    
+            
+
+
+	
+	<script type='text/javascript' src='http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/assets/js/bootstrap.min.js?ver=1.0'></script>
+        <script type='text/javascript' src='http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/assets/js/bootstrapwp.demo.js?ver=1.0'></script>
+
+        </footer>
+
 	</body>
 </html>

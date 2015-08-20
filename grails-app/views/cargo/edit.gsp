@@ -7,8 +7,6 @@
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
-            <div class="page-header"><h1>Sistema de Produção</h1></div>
-            <div class="login-header"> <span class="icon icon-user" aria-hidden="true"></span> <g:loginControl /> </div>
             
 		<div class="nav" role="navigation">
 			<ul class="nav nav-tabs nav-justified">

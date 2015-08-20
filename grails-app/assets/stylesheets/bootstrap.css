@@ -230,9 +230,9 @@ body {
   background-color: #ffffff;
   padding-left: 80px;
   padding-right: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   padding-top: 80px;
-  border: 10px solid #eeeeee;
+  border: 20px solid #eeeeee;
 }
 
 a {
