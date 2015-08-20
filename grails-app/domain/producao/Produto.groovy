@@ -5,6 +5,8 @@ class Produto {
 	String nome
 	Double valor
 	Double quantidade
+        
+    
 	static belongsTo = [unidadeMedida:Medida,setorProducao:Setor]
 						
 
