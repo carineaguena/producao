@@ -11,7 +11,7 @@ class UsuarioController {
     if(usuario){
       session.usuario = usuario
       flash.message = "Hello ${usuario.name}!"
-      redirect(controller:"home", action:"index")
+      render(view:'/index')
     }else{
       flash.message = "Sorry, ${params.login}. Please try again."
       redirect(action:"login")

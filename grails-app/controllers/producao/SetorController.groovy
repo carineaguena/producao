@@ -22,6 +22,15 @@ class SetorController {
     def create() {
         respond new Setor(params)
     }
+    
+    def beforeInterceptor = [action:this.&auth]
+        
+    def auth() {
+        if(!session.usuario) {
+            redirect(controller:"usuario", action:"login")
+            return false
+        }
+    }
 
     @Transactional
     def save(Setor setorInstance) {

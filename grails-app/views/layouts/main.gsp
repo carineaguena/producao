@@ -36,13 +36,13 @@
           
                       
                                     	
-                    <div class="panel-footer" style="margin-top:100px;">
+                    <div class="footer">
                             <a href="http://www.camboriu.ifc.edu.br">
-                        	<img style="margin-top:10px; width: 10%; padding:0px; border:0px;" src="http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/img/etiqueta_rodape2.png" />
+                        	<img src="http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/img/etiqueta_rodape2.png" />
                             </a>
                         
                         
-                            <img width="195" height="80" alt="" style="margin-top:60px; float: right;" src="http://www.camboriu.ifc.edu.br/wp-content/uploads/2014/09/BrancoH_80px.jpg" />
+                            <img width="195" height="80" alt="" src="http://www.camboriu.ifc.edu.br/wp-content/uploads/2014/09/BrancoH_80px.jpg" />
                         
                        
                             <h4>Endereço</h4>			
