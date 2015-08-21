@@ -7,18 +7,62 @@
   <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>SISPROD - Sistema de Produção</title>
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-responsive.css')}" type="text/css">
-		<asset:stylesheet src="bootstrap.css"/>
+		<title><g:layoutTitle default="Grails"/></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
+		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
+		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
+  		<!--<asset:stylesheet src="application.css"/>
+		<asset:javascript src="application.js"/>-->
+                <asset:stylesheet src="bootstrap.css"/>
                 <asset:stylesheet src="bootstrap.min.css"/>
                 <asset:stylesheet src="bootstrap-responsive.css"/>
                 <asset:stylesheet src="bootstrap-responsive.min.css"/>
 		<asset:javascript src="bootstrap.js"/>
                 <asset:javascript src="bootstrap.min.js"/>
 		<g:layoutHead/>
+             
+            
 	</head>
 	<body>
+            
+            <div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
+            
+            <div class="page-header"><h1>Sistema de Produção</h1></div>
+            <div class="login-header"> <span class="icon icon-user" aria-hidden="true"></span> <g:loginControl /> </div>
+              
 		<g:layoutBody/>
+                
+          
+                      
+                                    	
+                    <div class="panel-footer" style="margin-top:100px;">
+                            <a href="http://www.camboriu.ifc.edu.br">
+                        	<img style="margin-top:10px; width: 10%; padding:0px; border:0px;" src="http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/img/etiqueta_rodape2.png" />
+                            </a>
+                        
+                        
+                            <img width="195" height="80" alt="" style="margin-top:60px; float: right;" src="http://www.camboriu.ifc.edu.br/wp-content/uploads/2014/09/BrancoH_80px.jpg" />
+                        
+                       
+                            <h4>Endereço</h4>			
+                            
+                            <p>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA CATARINENSE - CÂMPUS CAMBORIÚ<br />
+                            RUA JOAQUIM GARCIA S/N - CAIXA POSTAL Nº 2016 - CEP 88340-055 - CAMBORIÚ - SC<br />
+                            TELEFAX: (47) 2104-0800 - E-mail: ifc@ifc-camboriu.edu.br</p>
+                           
+                      
+                                           
+                    </div>
+                    
+            
+
+
+	
+	<script type='text/javascript' src='http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/assets/js/bootstrap.min.js?ver=1.0'></script>
+        <script type='text/javascript' src='http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/assets/js/bootstrapwp.demo.js?ver=1.0'></script>
+
+        </footer>
+
 	</body>
 </html>
