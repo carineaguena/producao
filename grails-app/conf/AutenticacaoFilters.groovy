@@ -5,9 +5,10 @@
  */
 
 /**
- *
+ * classe que cria o filtro de acesso para controlar o login
  * @author carineaguena
  */
+
 class AutenticacaoFilters {
     
     def Filters = {

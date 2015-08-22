@@ -35,25 +35,20 @@
                 
           
                       
-                                    	
-                    <div class="footer">
-                            <a href="http://www.camboriu.ifc.edu.br">
-                        	<img src="http://www.camboriu.ifc.edu.br/wp-content/themes/ifc/img/etiqueta_rodape2.png" />
-                            </a>
+                     
+                        <div class="footer">
+                               <a href="${createLink(uri: '/')}" style="float: left"><asset:image src="etiqueta_rodape2.png" alt="Ifc"/></a>
+                               <a href="${createLink(uri: '/')}" style="float: right; padding-top: 30px; padding-left: 30px"><asset:image src="BrancoH_80px.jpg" alt="105"/></a>
                         
-                        
-                            <img width="195" height="80" alt="" src="http://www.camboriu.ifc.edu.br/wp-content/uploads/2014/09/BrancoH_80px.jpg" />
-                        
-                       
                             <h4>Endereço</h4>			
                             
-                            <p>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA CATARINENSE - CÂMPUS CAMBORIÚ<br />
-                            RUA JOAQUIM GARCIA S/N - CAIXA POSTAL Nº 2016 - CEP 88340-055 - CAMBORIÚ - SC<br />
-                            TELEFAX: (47) 2104-0800 - E-mail: ifc@ifc-camboriu.edu.br</p>
-                           
-                      
+                            <p>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA CATARINENSE - CÂMPUS CAMBORIÚ</p>
+                            <p>RUA JOAQUIM GARCIA S/N - CAIXA POSTAL Nº 2016 - CEP 88340-055 - CAMBORIÚ - SC<p/>
+                            <p>TELEFAX: (47) 2104-0800 - E-mail: ifc@ifc-camboriu.edu.br</p>
+                          
+                      </div>
                                            
-                    </div>
+                  
                     
             
 
