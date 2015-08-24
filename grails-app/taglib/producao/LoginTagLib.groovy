@@ -7,7 +7,7 @@ class LoginTagLib {
     def loginControl = {
         
         if(session.usuario){
-            out << "Hello ${session.usuario.name}, "
+            out << "Olá ${session.usuario.name}, "
             //out << """[${link(action:"logout", controller:"usuario"){"Logout"}}]"""
             out << g.link(action:"logout", controller:"usuario"){"Logout"}
             

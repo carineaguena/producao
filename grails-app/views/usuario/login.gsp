@@ -4,10 +4,15 @@
     <title>Login</title>
   </head>
   <body>
-    <div class="body">
+      <div id="page-body" role="main" style="padding-left: 80px">
       <h1>Login</h1>
+      
       <g:if test="${flash.message}" >
-        <div class="message">${flash.message}</div>
+          <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+                ${flash.message}
+          </div>
       </g:if>
       <g:form action="authenticate" method="post" >
         <div class="dialog">
@@ -24,7 +29,7 @@
 
               <tr class="prop">
                 <td class="name">
-                  <label for="password">Password:</label>
+                  <label for="password">Senha:</label>
                 </td>
                 <td>
                   <input type="password" id="password" name="password"/>
