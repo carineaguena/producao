@@ -11,21 +11,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'valor', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'valor', 'error')} ">
 	<label for="valor">
 		<g:message code="produto.valor.label" default="Valor" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:field name="valor" value="${fieldValue(bean: produtoInstance, field: 'valor')}" required=""/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'quantidade', 'error')} required">
-	<label for="quantidade">
-		<g:message code="produto.quantidade.label" default="Quantidade" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="quantidade" value="${fieldValue(bean: produtoInstance, field: 'quantidade')}" required=""/>
+	<g:field name="valor" value="${fieldValue(bean: produtoInstance, field: 'valor')}"/>
 
 </div>
 
@@ -44,6 +35,15 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="setorProducao" name="setorProducao.id" from="${producao.Setor.list()}" optionKey="id" required="" value="${produtoInstance?.setorProducao?.id}" class="many-to-one"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'quantidade', 'error')} required">
+	<label for="quantidade">
+		<g:message code="produto.quantidade.label" default="Quantidade" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="quantidade" value="${fieldValue(bean: produtoInstance, field: 'quantidade')}" required=""/>
 
 </div>
 

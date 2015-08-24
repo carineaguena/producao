@@ -8,7 +8,6 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class CargoController {
 
-    //metodos que possuem acoes permitidas
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -33,7 +32,9 @@ class CargoController {
             return false
         }
     }
-    
+
+    //copiar até aqui
+
     @Transactional
     def save(Cargo cargoInstance) {
         if (cargoInstance == null) {

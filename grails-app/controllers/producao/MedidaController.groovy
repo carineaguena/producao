@@ -8,7 +8,6 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class MedidaController {
 
-    //metodos que possuem acoes permitidas
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -23,7 +22,7 @@ class MedidaController {
     def create() {
         respond new Medida(params)
     }
-    
+
     //controle de autenticacao (deve ser colocado em todos os controles que deseja proteger)
     def beforeInterceptor = [action:this.&auth]
         
@@ -33,6 +32,8 @@ class MedidaController {
             return false
         }
     }
+
+    //copiar até aqui
 
     @Transactional
     def save(Medida medidaInstance) {

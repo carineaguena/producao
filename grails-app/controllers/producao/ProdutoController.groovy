@@ -8,7 +8,6 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class ProdutoController {
 
-    //metodos que possuem acoes permitidas
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -33,7 +32,9 @@ class ProdutoController {
             return false
         }
     }
-    
+
+    //copiar até aqui
+
     @Transactional
     def save(Produto produtoInstance) {
         if (produtoInstance == null) {
@@ -103,7 +104,6 @@ class ProdutoController {
         }
     }
 
- 
     protected void notFound() {
         request.withFormat {
             form multipartForm {

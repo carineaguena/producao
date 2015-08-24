@@ -42,15 +42,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${produtoInstance?.quantidade}">
-				<li class="fieldcontain">
-					<span id="quantidade-label" class="property-label"><g:message code="produto.quantidade.label" default="Quantidade" /></span>
-					
-						<span class="property-value" aria-labelledby="quantidade-label"><g:fieldValue bean="${produtoInstance}" field="quantidade"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${produtoInstance?.unidadeMedida}">
 				<li class="fieldcontain">
 					<span id="unidadeMedida-label" class="property-label"><g:message code="produto.unidadeMedida.label" default="Unidade Medida" /></span>
@@ -65,6 +56,15 @@
 					<span id="setorProducao-label" class="property-label"><g:message code="produto.setorProducao.label" default="Setor Producao" /></span>
 					
 						<span class="property-value" aria-labelledby="setorProducao-label"><g:link controller="setor" action="show" id="${produtoInstance?.setorProducao?.id}">${produtoInstance?.setorProducao?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${produtoInstance?.quantidade}">
+				<li class="fieldcontain">
+					<span id="quantidade-label" class="property-label"><g:message code="produto.quantidade.label" default="Quantidade" /></span>
+					
+						<span class="property-value" aria-labelledby="quantidade-label"><g:fieldValue bean="${produtoInstance}" field="quantidade"/></span>
 					
 				</li>
 				</g:if>

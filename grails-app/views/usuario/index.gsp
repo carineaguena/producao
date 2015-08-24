@@ -8,7 +8,6 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		
                     <div class="nav" role="navigation">
                         
 			<ul class="nav nav-tabs nav-justified">
@@ -27,6 +26,7 @@
 					
 						<g:sortableColumn property="login" title="${message(code: 'usuario.login.label', default: 'Login')}" />
 					
+						<g:sortableColumn property="password" title="${message(code: 'usuario.password.label', default: 'Password')}" />
 					
 						<g:sortableColumn property="name" title="${message(code: 'usuario.name.label', default: 'Name')}" />
 					
@@ -37,6 +37,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${usuarioInstance.id}">${fieldValue(bean: usuarioInstance, field: "login")}</g:link></td>
+					
+						<td>${fieldValue(bean: usuarioInstance, field: "password")}</td>
 					
 						<td>${fieldValue(bean: usuarioInstance, field: "name")}</td>
 					

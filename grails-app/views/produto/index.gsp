@@ -8,7 +8,6 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		
                     <div class="nav" role="navigation">
                         
 			<ul class="nav nav-tabs nav-justified">
@@ -29,11 +28,11 @@
 					
 						<g:sortableColumn property="valor" title="${message(code: 'produto.valor.label', default: 'Valor')}" />
 					
-						<g:sortableColumn property="quantidade" title="${message(code: 'produto.quantidade.label', default: 'Quantidade')}" />
-					
 						<th><g:message code="produto.unidadeMedida.label" default="Unidade Medida" /></th>
 					
 						<th><g:message code="produto.setorProducao.label" default="Setor Producao" /></th>
+					
+						<g:sortableColumn property="quantidade" title="${message(code: 'produto.quantidade.label', default: 'Quantidade')}" />
 					
 					</tr>
 				</thead>
@@ -45,11 +44,11 @@
 					
 						<td>${fieldValue(bean: produtoInstance, field: "valor")}</td>
 					
-						<td>${fieldValue(bean: produtoInstance, field: "quantidade")}</td>
-					
 						<td>${fieldValue(bean: produtoInstance, field: "unidadeMedida")}</td>
 					
 						<td>${fieldValue(bean: produtoInstance, field: "setorProducao")}</td>
+					
+						<td>${fieldValue(bean: produtoInstance, field: "quantidade")}</td>
 					
 					</tr>
 				</g:each>
