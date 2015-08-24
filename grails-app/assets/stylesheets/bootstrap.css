@@ -45,12 +45,21 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 nav,
 section {
   display: block;
+}
+
+.footer {
+	background:#006400;
+	color: #000;
+	clear: both;
+	font-size: 0.8em;
+	margin-top: 80px;
+	padding: 0;
+	min-height: 1em;
 }
 
 audio,
