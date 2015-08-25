@@ -40,21 +40,21 @@ class UsuarioController {
     //def usuario = Usuario.findByLoginAndPassword(params.login, params.password)
     if(usuario){
       session.usuario = usuario
-     // flash.message = true
+     // flash.message = "Olá ${usuario.name}!"
       //loga e manda para pagina do controle
       render(view:'/home')
     }else{
-    //  flash.message = false
+      flash.message = "Desculpe, ${params.login}. Por favor, tente novamente."
       redirect(action:"login")
     }
   }
 
   def logout = {
 
-   // flash.message = false
+    //flash.message = "Até mais ${session.usuario.name}"
     session.usuario = null
     //desloga e manda para a pagina inicial do servidor
-    render(view:"/index")
+    render(view:"/home")
   }
   
  

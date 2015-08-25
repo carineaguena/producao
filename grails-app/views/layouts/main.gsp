@@ -68,7 +68,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/producao">Sistema de Produção</a>
+          <a class="navbar-brand" href="/producao">Sistema de Produção - Instituto Federal Catarinense</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
@@ -93,7 +93,7 @@
             
             <div class="page-header">
               <a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a>
-              <h1>Sistema de Produção</h1></div>
+              <h1>Sistema de Controle de Produção Agropecuária - SISPROD</h1></div>
           </div>
             
 
