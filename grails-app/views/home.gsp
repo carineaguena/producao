@@ -26,8 +26,18 @@
                                         <li><g:link controller="cargo"><span class="icon icon-briefcase" aria-hidden="true"></span> Cargo</g:link></li>
                                         <li><g:link controller="solicitacao"><span class="icon icon-plus-sign" aria-hidden="true"></span> Solicitação</g:link></li>
 				</ul>
-                                 <h2>Bem-Vindo!</h2>
-                                        <br><br><br><br>
+                            
+
+                <div class="jumbotron">
+
+      				<div class="container">
+        				<h1>Bem-Vindo!</h1>
+        				<p>Este é o sistema de controle de produção agropecuária do Instituto Federal Catarinense.</p>
+        				
+      				</div>
+    			</div>
+
+    
 			</div>
 		</div>
 	</body>
