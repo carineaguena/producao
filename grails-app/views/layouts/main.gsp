@@ -14,22 +14,89 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
   		<!--<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>-->
+
                 <asset:stylesheet src="bootstrap.css"/>
                 <asset:stylesheet src="bootstrap.min.css"/>
                 <asset:stylesheet src="bootstrap-responsive.css"/>
                 <asset:stylesheet src="bootstrap-responsive.min.css"/>
-		<asset:javascript src="bootstrap.js"/>
+                <asset:stylesheet src="jumbottron.css"/>
+		            <asset:javascript src="bootstrap.js"/>
                 <asset:javascript src="bootstrap.min.js"/>
-		<g:layoutHead/>
+		            <g:layoutHead/>
              
             
 	</head>
 	<body>
+
+
+    <g:if test='${session.usuario}'>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/producao">Sistema de Produção</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse"></div>
+         <div class="login-header" style="color:#FFFFFF"> <span class="icon icon-user" aria-hidden="true"></span> <g:loginControl />
+           </div></div>
+
+
+        </nav>
+
+         <div class="nav" role="navigation">
+
+        <g:link controller="home"><span class="icon icon-home" aria-hidden="true"></span> Menu Inicial</g:link>
+     
+                             
+      </div>
+       
+
+     </g:if>
+    <g:else>
+
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/producao">Sistema de Produção</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+          <g:form class="navbar-form navbar-right" controller="usuario" action="authenticate" method="post">
+            <div class="form-group">
+              <input type="text" placeholder="Usuário" class="form-control" id="login" name="login">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </g:form>
+
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+</g:else>
+
+      <div class="cabecalho">
             
-            <div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
+          
             
-            <div class="page-header"><h1>Sistema de Produção</h1></div>
-            <div class="login-header"> <span class="icon icon-user" aria-hidden="true"></span> <g:loginControl /> </div>
+            <div class="page-header">
+              <a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a>
+              <h1>Sistema de Produção</h1></div>
+          </div>
+            
+
               
 		<g:layoutBody/>
                 
