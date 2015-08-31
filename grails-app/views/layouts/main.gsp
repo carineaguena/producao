@@ -26,14 +26,19 @@
 	</head>
 	<body>
             
-            <div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
+          <div class="cabecalho">
             
-            <div class="page-header"><h1>Sistema de Produção</h1></div>
+          
+            
+            <div class="page-header">
+              <a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a>
+              <br><br><br></div>
+          </div>
             <div class="login-header"> <span class="icon icon-user" aria-hidden="true"></span> <g:loginControl /> </div>
-              
+             
 		<g:layoutBody/>
                 
-          
+        
                       
                      
                         <div class="footer">
