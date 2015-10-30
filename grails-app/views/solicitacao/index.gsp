@@ -26,13 +26,13 @@
 					
 						<th><g:message code="solicitacao.nomeProduto.label" default="Nome Produto" /></th>
 					
-						<th><g:message code="solicitacao.setorSolicitante.label" default="Setor Solicitante" /></th>
-					
-						<th><g:message code="solicitacao.setorSolicitado.label" default="Setor Solicitado" /></th>
+						<th><g:message code="solicitacao.unidadeMedida.label" default="Unidade Medida" /></th>
 					
 						<g:sortableColumn property="quantidade" title="${message(code: 'solicitacao.quantidade.label', default: 'Quantidade')}" />
 					
-						<th><g:message code="solicitacao.unidadeMedida.label" default="Unidade Medida" /></th>
+						<th><g:message code="solicitacao.setorSolicitante.label" default="Setor Solicitante" /></th>
+					
+						<th><g:message code="solicitacao.setorSolicitado.label" default="Setor Solicitado" /></th>
 					
 						<g:sortableColumn property="dataSolicitacao" title="${message(code: 'solicitacao.dataSolicitacao.label', default: 'Data Solicitacao')}" />
 					
@@ -44,13 +44,13 @@
 					
 						<td><g:link action="show" id="${solicitacaoInstance.id}">${fieldValue(bean: solicitacaoInstance, field: "nomeProduto")}</g:link></td>
 					
-						<td>${fieldValue(bean: solicitacaoInstance, field: "setorSolicitante")}</td>
-					
-						<td>${fieldValue(bean: solicitacaoInstance, field: "setorSolicitado")}</td>
+						<td>${fieldValue(bean: solicitacaoInstance, field: "unidadeMedida")}</td>
 					
 						<td>${fieldValue(bean: solicitacaoInstance, field: "quantidade")}</td>
 					
-						<td>${fieldValue(bean: solicitacaoInstance, field: "unidadeMedida")}</td>
+						<td>${fieldValue(bean: solicitacaoInstance, field: "setorSolicitante")}</td>
+					
+						<td>${fieldValue(bean: solicitacaoInstance, field: "setorSolicitado")}</td>
 					
 						<td><g:formatDate date="${solicitacaoInstance.dataSolicitacao}" /></td>
 					

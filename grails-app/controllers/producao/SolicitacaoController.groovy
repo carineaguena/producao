@@ -33,8 +33,23 @@ class SolicitacaoController {
         }
     }
 
-    //copiar até aqui
+    def enviarMensagem(Solicitacao envio) {
+        envio.validate()
+        if (envio.hasErrors()) {
+            // Erro encontrado
+            flash.message = "Erro de validação"
+            render(view:"comunicacao",
+            model:[mensagem:envio,
+            fornecedores:Fornecedor.list()])
+        } else {
+            // Mensagem enviada (código omitido)
+            flash.message = "Mensagem enviada com sucesso"
+            render(view:'comunicacao')
+        }
+    }
 
+    //copiar até aqui
+    
     @Transactional
     def save(Solicitacao solicitacaoInstance) {
         if (solicitacaoInstance == null) {

@@ -8,6 +8,10 @@ class Servidor {
 		Integer ramal
 		String senha
 		
+
+		String toString(){
+		this.email
+	}
 		
 		static belongsTo = [cargo:Cargo, setor:Setor]
 
@@ -15,7 +19,7 @@ class Servidor {
 	
 			siape nullable:false, blank:false, maxSize: 50
 			nome nullable:false, blank:false, maxSize: 50
-			email nullable:false, blank:false, maxSize: 50
+			email maxSize: 50
 			ramal nullable:false, blank:false, maxSize: 50
 			cargo nullable:false, blank:false, maxSize: 50
 			setor nullable:false, blank:false, maxSize: 50

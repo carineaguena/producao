@@ -33,6 +33,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${solicitacaoInstance?.unidadeMedida}">
+				<li class="fieldcontain">
+					<span id="unidadeMedida-label" class="property-label"><g:message code="solicitacao.unidadeMedida.label" default="Unidade Medida" /></span>
+					
+						<span class="property-value" aria-labelledby="unidadeMedida-label"><g:link controller="medida" action="show" id="${solicitacaoInstance?.unidadeMedida?.id}">${solicitacaoInstance?.unidadeMedida?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${solicitacaoInstance?.quantidade}">
+				<li class="fieldcontain">
+					<span id="quantidade-label" class="property-label"><g:message code="solicitacao.quantidade.label" default="Quantidade" /></span>
+					
+						<span class="property-value" aria-labelledby="quantidade-label"><g:fieldValue bean="${solicitacaoInstance}" field="quantidade"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${solicitacaoInstance?.setorSolicitante}">
 				<li class="fieldcontain">
 					<span id="setorSolicitante-label" class="property-label"><g:message code="solicitacao.setorSolicitante.label" default="Setor Solicitante" /></span>
@@ -51,24 +69,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${solicitacaoInstance?.quantidade}">
-				<li class="fieldcontain">
-					<span id="quantidade-label" class="property-label"><g:message code="solicitacao.quantidade.label" default="Quantidade" /></span>
-					
-						<span class="property-value" aria-labelledby="quantidade-label"><g:fieldValue bean="${solicitacaoInstance}" field="quantidade"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${solicitacaoInstance?.unidadeMedida}">
-				<li class="fieldcontain">
-					<span id="unidadeMedida-label" class="property-label"><g:message code="solicitacao.unidadeMedida.label" default="Unidade Medida" /></span>
-					
-						<span class="property-value" aria-labelledby="unidadeMedida-label"><g:link controller="medida" action="show" id="${solicitacaoInstance?.unidadeMedida?.id}">${solicitacaoInstance?.unidadeMedida?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${solicitacaoInstance?.dataSolicitacao}">
 				<li class="fieldcontain">
 					<span id="dataSolicitacao-label" class="property-label"><g:message code="solicitacao.dataSolicitacao.label" default="Data Solicitacao" /></span>
@@ -78,11 +78,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${solicitacaoInstance?.dataPrevista}">
+				<g:if test="${solicitacaoInstance?.email}">
 				<li class="fieldcontain">
-					<span id="dataPrevista-label" class="property-label"><g:message code="solicitacao.dataPrevista.label" default="Data Prevista" /></span>
+					<span id="email-label" class="property-label"><g:message code="solicitacao.email.label" default="Email" /></span>
 					
-						<span class="property-value" aria-labelledby="dataPrevista-label"><g:formatDate date="${solicitacaoInstance?.dataPrevista}" /></span>
+						<span class="property-value" aria-labelledby="email-label"><g:link controller="servidor" action="show" id="${solicitacaoInstance?.email?.id}">${solicitacaoInstance?.email?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

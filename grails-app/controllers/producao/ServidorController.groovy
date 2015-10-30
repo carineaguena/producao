@@ -23,7 +23,7 @@ class ServidorController {
         respond new Servidor(params)
     }
 
-    //controle de autenticacao (deve ser colocado em todos os controles que deseja proteger)
+     //controle de autenticacao (deve ser colocado em todos os controles que deseja proteger)
     def beforeInterceptor = [action:this.&auth]
         
     def auth() {
@@ -34,7 +34,7 @@ class ServidorController {
     }
 
     //copiar até aqui
-
+    
     @Transactional
     def save(Servidor servidorInstance) {
         if (servidorInstance == null) {

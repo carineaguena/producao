@@ -11,6 +11,24 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'unidadeMedida', 'error')} required">
+	<label for="unidadeMedida">
+		<g:message code="solicitacao.unidadeMedida.label" default="Unidade Medida" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="unidadeMedida" name="unidadeMedida.id" from="${producao.Medida.list()}" optionKey="id" required="" value="${solicitacaoInstance?.unidadeMedida?.id}" class="many-to-one"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'quantidade', 'error')} required">
+	<label for="quantidade">
+		<g:message code="solicitacao.quantidade.label" default="Quantidade" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="quantidade" value="${fieldValue(bean: solicitacaoInstance, field: 'quantidade')}" required=""/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'setorSolicitante', 'error')} required">
 	<label for="setorSolicitante">
 		<g:message code="solicitacao.setorSolicitante.label" default="Setor Solicitante" />
@@ -29,24 +47,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'quantidade', 'error')} required">
-	<label for="quantidade">
-		<g:message code="solicitacao.quantidade.label" default="Quantidade" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="quantidade" value="${fieldValue(bean: solicitacaoInstance, field: 'quantidade')}" required=""/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'unidadeMedida', 'error')} required">
-	<label for="unidadeMedida">
-		<g:message code="solicitacao.unidadeMedida.label" default="Unidade Medida" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="unidadeMedida" name="unidadeMedida.id" from="${producao.Medida.list()}" optionKey="id" required="" value="${solicitacaoInstance?.unidadeMedida?.id}" class="many-to-one"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'dataSolicitacao', 'error')} required">
 	<label for="dataSolicitacao">
 		<g:message code="solicitacao.dataSolicitacao.label" default="Data Solicitacao" />
@@ -56,12 +56,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'dataPrevista', 'error')} required">
-	<label for="dataPrevista">
-		<g:message code="solicitacao.dataPrevista.label" default="Data Prevista" />
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'email', 'error')} required">
+	<label for="email">
+		<g:message code="solicitacao.email.label" default="Email" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="dataPrevista" precision="day"  value="${solicitacaoInstance?.dataPrevista}"  />
+	<g:select id="email" name="email.id" from="${producao.Servidor.list()}" optionKey="id" required="" value="${solicitacaoInstance?.email?.id}" class="many-to-one"/>
 
 </div>
 
