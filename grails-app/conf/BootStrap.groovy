@@ -18,13 +18,18 @@ class BootStrap {
 		}
 		//carrega as medidas no banco de dados
 		if (!Medida.count()){
-			new Medida(descricao: "Peso", tipo:"Kg").save()
+			def medida = new Medida(descricao: "Peso", tipo:"Kg").save()
 			new Medida(descricao: "Liquido", tipo:"Lt").save()
 		}
     	//carrega os setores no banco de dados
     	if (!Setor.count()){
-			new Setor(nome: "Agroindústria").save()
+			def setor = new Setor(nome: "Agroindústria").save()
 			new Setor(nome: "Cozinha").save()
+		}
+		//carrega os produtos
+		if (!Produto.count()){
+			//new Produto(nome: "Carne", valor:"0.0", quantidade:"0", unidadeMedida:medida, setorProducao:setor).save()
+		
 		}
     }
     def destroy = {

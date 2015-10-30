@@ -87,6 +87,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${solicitacaoInstance?.status}">
+				<li class="fieldcontain">
+					<span id="status-label" class="property-label"><g:message code="solicitacao.status.label" default="Status" /></span>
+					
+						<span class="property-value" aria-labelledby="status-label"><g:fieldValue bean="${solicitacaoInstance}" field="status"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:solicitacaoInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

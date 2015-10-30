@@ -65,3 +65,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">
+	<label for="status">
+		<g:message code="solicitacao.status.label" default="Status" />
+		<span class="required-indicator">*</span>
+	</label>
+
+	<g:select name="status" from="${['Solicitado', 'Atendido', 'Recusado']}" required="" value="${solicitacaoInstance?.status}"/>
+
+
+
+</div>
+

@@ -35,6 +35,8 @@
 						<th><g:message code="solicitacao.setorSolicitado.label" default="Setor Solicitado" /></th>
 					
 						<g:sortableColumn property="dataSolicitacao" title="${message(code: 'solicitacao.dataSolicitacao.label', default: 'Data Solicitacao')}" />
+
+						<th><g:message code="solicitacao.status.label" default="Status" /></th>
 					
 					</tr>
 				</thead>
@@ -53,6 +55,8 @@
 						<td>${fieldValue(bean: solicitacaoInstance, field: "setorSolicitado")}</td>
 					
 						<td><g:formatDate date="${solicitacaoInstance.dataSolicitacao}" /></td>
+
+						<td>${fieldValue(bean: solicitacaoInstance, field: "status")}</td>
 					
 					</tr>
 				</g:each>

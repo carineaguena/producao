@@ -23,33 +23,6 @@ class SolicitacaoController {
         respond new Solicitacao(params)
     }
 
-    //controle de autenticacao (deve ser colocado em todos os controles que deseja proteger)
-    def beforeInterceptor = [action:this.&auth]
-        
-    def auth() {
-        if(!session.usuario) {
-            redirect(controller:"usuario", action:"login")
-            return false
-        }
-    }
-
-    def enviarMensagem(Solicitacao envio) {
-        envio.validate()
-        if (envio.hasErrors()) {
-            // Erro encontrado
-            flash.message = "Erro de validação"
-            render(view:"comunicacao",
-            model:[mensagem:envio,
-            fornecedores:Fornecedor.list()])
-        } else {
-            // Mensagem enviada (código omitido)
-            flash.message = "Mensagem enviada com sucesso"
-            render(view:'comunicacao')
-        }
-    }
-
-    //copiar até aqui
-    
     @Transactional
     def save(Solicitacao solicitacaoInstance) {
         if (solicitacaoInstance == null) {
