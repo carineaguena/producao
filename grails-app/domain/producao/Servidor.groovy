@@ -6,7 +6,7 @@ class Servidor {
 		String nome
 		String email
 		Integer ramal
-		String senha
+		
 		
 
 		String toString(){
@@ -23,6 +23,6 @@ class Servidor {
 			ramal nullable:false, blank:false, maxSize: 50
 			cargo nullable:false, blank:false, maxSize: 50
 			setor nullable:false, blank:false, maxSize: 50
-			senha nullable:false, blank:false, maxSize: 50
+			
     }
 }

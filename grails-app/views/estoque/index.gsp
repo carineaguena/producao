@@ -30,7 +30,9 @@
 					
 						<th><g:message code="estoque.nomeProduto.label" default="Nome Produto" /></th>
 					
-						<th><g:message code="estoque.setorProducao.label" default="Setor Producao" /></th>
+						<th><g:message code="estoque.setorDeOrigemDoProduto.label" default="Setor De Origem Do Produto" /></th>
+					
+						<g:sortableColumn property="dataDaMovimentação" title="${message(code: 'estoque.dataDaMovimentação.label', default: 'Data Da Movimentação')}" />
 					
 					</tr>
 				</thead>
@@ -44,7 +46,9 @@
 					
 						<td>${fieldValue(bean: estoqueInstance, field: "nomeProduto")}</td>
 					
-						<td>${fieldValue(bean: estoqueInstance, field: "setorProducao")}</td>
+						<td>${fieldValue(bean: estoqueInstance, field: "setorDeOrigemDoProduto")}</td>
+					
+						<td><g:formatDate date="${estoqueInstance.dataDaMovimentação}" /></td>
 					
 					</tr>
 				</g:each>

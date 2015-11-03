@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'movimentacao.label', default: 'Movimentacao')}" />
+		<g:set var="entityName" value="${message(code: 'movimentacao.label', default: 'Movimentação')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -32,7 +32,7 @@
 					
 						<g:sortableColumn property="quantidade" title="${message(code: 'movimentacao.quantidade.label', default: 'Quantidade')}" />
 					
-						<g:sortableColumn property="dataMovimentacao" title="${message(code: 'movimentacao.dataMovimentacao.label', default: 'Data Movimentacao')}" />
+						<g:sortableColumn property="dataMovimentacao" title="${message(code: 'movimentacao.dataMovimentacao.label', default: 'Data Movimentação')}" />
 					
 					</tr>
 				</thead>

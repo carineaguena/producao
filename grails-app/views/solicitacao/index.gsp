@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'solicitacao.label', default: 'Solicitacao')}" />
+		<g:set var="entityName" value="${message(code: 'solicitacao.label', default: 'Solicitação')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -34,7 +34,9 @@
 					
 						<th><g:message code="solicitacao.setorSolicitado.label" default="Setor Solicitado" /></th>
 					
-						<g:sortableColumn property="dataSolicitacao" title="${message(code: 'solicitacao.dataSolicitacao.label', default: 'Data Solicitacao')}" />
+						<g:sortableColumn property="dataSolicitacao" title="${message(code: 'solicitacao.dataSolicitacao.label', default: 'Data Solicitação')}" />
+
+						<th><g:message code="solicitacao.email.label" default="Email" /></th>
 
 						<th><g:message code="solicitacao.status.label" default="Status" /></th>
 					
@@ -55,6 +57,8 @@
 						<td>${fieldValue(bean: solicitacaoInstance, field: "setorSolicitado")}</td>
 					
 						<td><g:formatDate date="${solicitacaoInstance.dataSolicitacao}" /></td>
+
+						<td>${fieldValue(bean: solicitacaoInstance, field: "email")}</td>
 
 						<td>${fieldValue(bean: solicitacaoInstance, field: "status")}</td>
 					

@@ -56,12 +56,5 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'senha', 'error')} required">
-	<label for="senha">
-		<g:message code="servidor.senha.label" default="Senha" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="senha" maxlength="50" required="" value="${servidorInstance?.senha}"/>
 
-</div>
 

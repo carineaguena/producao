@@ -1,14 +1,13 @@
 package producao
 
-class Solicitacao {
+class Solicitação {
 
 		static belongsTo = [nomeProduto:Produto, unidadeMedida:Medida, setorSolicitante:Setor, setorSolicitado:Setor, email:Servidor]
-		Date dataSolicitacao
+		Date dataSolicitação
 		Double quantidade
 		String status
 
 
-		
 
     static constraints = {
 			
@@ -17,7 +16,7 @@ class Solicitacao {
 			quantidade nullable:false, blank:false, maxSize: 50
 			setorSolicitante nullable:false, blank:false, maxSize: 50
 			setorSolicitado nullable:false, blank:false, maxSize: 50
-			dataSolicitacao nullable:false, blank:false, maxSize: 50
+			dataSolicitação nullable:false, blank:false, maxSize: 50
 			email maxSize: 50
 			status nullable:false, blank:false, maxSize: 50
     }

@@ -78,14 +78,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${servidorInstance?.senha}">
-				<li class="fieldcontain">
-					<span id="senha-label" class="property-label"><g:message code="servidor.senha.label" default="Senha" /></span>
-					
-						<span class="property-value" aria-labelledby="senha-label"><g:fieldValue bean="${servidorInstance}" field="senha"/></span>
-					
-				</li>
-				</g:if>
 			
 			</ol>
 			<g:form url="[resource:servidorInstance, action:'delete']" method="DELETE">

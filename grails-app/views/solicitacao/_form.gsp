@@ -70,10 +70,7 @@
 		<g:message code="solicitacao.status.label" default="Status" />
 		<span class="required-indicator">*</span>
 	</label>
-
 	<g:select name="status" from="${['Solicitado', 'Atendido', 'Recusado']}" required="" value="${solicitacaoInstance?.status}"/>
-
-
 
 </div>
 

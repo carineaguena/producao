@@ -1,7 +1,7 @@
 package producao
 
 
-
+import producao.Estoque
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -22,6 +22,18 @@ class SolicitacaoController {
     def create() {
         respond new Solicitacao(params)
     }
+    
+    //controle de autenticacao (deve ser colocado em todos os controles que deseja proteger)
+    def beforeInterceptor = [action:this.&auth]
+        
+    def auth() {
+        if(!session.usuario) {
+            redirect(controller:"usuario", action:"login")
+            return false
+        }
+    }
+
+    //copiar até aqui
 
     @Transactional
     def save(Solicitacao solicitacaoInstance) {
@@ -44,6 +56,7 @@ class SolicitacaoController {
             }
             '*' { respond solicitacaoInstance, [status: CREATED] }
         }
+
     }
 
     def edit(Solicitacao solicitacaoInstance) {
@@ -62,6 +75,28 @@ class SolicitacaoController {
             return
         }
 
+        //começa aqui
+
+        if (solicitacaoInstance.status == "Atendido"){
+            String hql = "select est from Estoque est where est.setorDeOrigemDoProduto = :setor " +
+                " AND est.nomeProduto = :nomeProduto"
+            
+            //def result = Estoque.get(1)
+
+            //Double bb = solicitacaoInstance.quantidade
+            //Double aa = result.quantidade.toDouble()
+            
+            //render(result.quantidade+" -+= "+solicitacaoInstance.quantidade+" "+(aa - bb))
+            def result = Estoque.executeQuery(hql, [setor:solicitacaoInstance.setorSolicitado, nomeProduto:solicitacaoInstance.nomeProduto])
+            Double aa = result[0].quantidade
+            Double bb = solicitacaoInstance.quantidade.toDouble()
+            render(result.quantidade+" -+= "+solicitacaoInstance.quantidade+" "+(aa - bb))
+          
+            result.quantidade = (aa - bb)
+        }
+
+        //até aqui
+
         solicitacaoInstance.save flush:true
 
         request.withFormat {
@@ -71,6 +106,9 @@ class SolicitacaoController {
             }
             '*'{ respond solicitacaoInstance, [status: OK] }
         }
+
+       
+
     }
 
     @Transactional
