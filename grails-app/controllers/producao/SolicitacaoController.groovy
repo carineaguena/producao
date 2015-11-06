@@ -1,7 +1,7 @@
 package producao
 
 
-import producao.Estoque
+import producao.*
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -79,10 +79,15 @@ class SolicitacaoController {
 
         if (solicitacaoInstance.status == "Atendido"){
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 054c638f87451db89d48afbe35c4b8371980c2b7
             String hql = "select est from Estoque est where est.setorDeOrigemDoProduto = :setor " +
                 " AND est.nomeProduto = :nomeProduto"
 
             def result = Estoque.executeQuery(hql, [setor:solicitacaoInstance.setorSolicitado, nomeProduto:solicitacaoInstance.nomeProduto])
+<<<<<<< HEAD
             def Double valorBanco = result[0].quantidade
             def Double valorDigitado = solicitacaoInstance.quantidade.toDouble()
             def resultado = valorBanco - valorDigitado
@@ -140,6 +145,23 @@ class SolicitacaoController {
         }
         else{
             solicitacaoInstance.save flush:true
+=======
+            Double aa = result[0].quantidade
+            Double bb = solicitacaoInstance.quantidade.toDouble()
+           // render(result.quantidade+" -+= "+solicitacaoInstance.quantidade+" "+(aa - bb))
+          
+           // result.quantidade = (aa - bb)
+           //Estoque.quantidade = (aa - bb)
+           def resultado = aa - bb
+           def resultado_nomeProduto = result.nomeProduto
+           def resultado_setor = result.setorDeOrigemDoProduto
+
+          // render(result.setorDeOrigemDoProduto)
+          
+
+           Estoque.executeUpdate("update Estoque set quantidade = :resultado where nomeProduto = :nomeProduto and setorDeOrigemDoProduto = :setorDeOrigemDoProduto", [resultado:resultado, nomeProduto:result.nomeProduto, setorDeOrigemDoProduto:result.setorDeOrigemDoProduto])
+            
+>>>>>>> 054c638f87451db89d48afbe35c4b8371980c2b7
         }
 
         //até aqui
