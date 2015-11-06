@@ -47,6 +47,17 @@ class ProdutoController {
             return
         }
 
+        /*def produto = Produto.executeQuery("select pro from Produto pro where upper(pro.nome) like upper(:nomeProduto) AND " + 
+            " pro.setorProducao = :setor", 
+            [nomeProduto:produtoInstance.nome, setor:produtoInstance.setorProducao])
+
+        if(produto){
+            //erro duplicidade de nome
+
+            produtoInstance.save flush:false
+        }else{
+            //produtoInstance.save flush:true
+        }*/
         produtoInstance.save flush:true
 
         request.withFormat {
@@ -55,7 +66,7 @@ class ProdutoController {
                 redirect produtoInstance
             }
             '*' { respond produtoInstance, [status: CREATED] }
-        }
+        }   
     }
 
     def edit(Produto produtoInstance) {

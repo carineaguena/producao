@@ -27,7 +27,8 @@
                                         <li><g:link controller="servidor"><span class="icon icon-user" aria-hidden="true"></span> Servidor</g:link></li>
                                         <li><g:link controller="estoque"><span class="icon icon-adjust" aria-hidden="true"></span> Estoque</g:link></li>
                                         <li><g:link controller="solicitacao"><span class="icon icon-list" aria-hidden="true"></span> Solicitação</g:link></li>
-                                       <!-- <li><g:link controller="movimentacao"><span class="icon icon-move" aria-hidden="true"></span> Movimentação</g:link></li>-->
+                                       <li><g:link controller="movimentacao"><span class="icon icon-move" aria-hidden="true"></span> Movimentação</g:link></li>
+                                       
 				</ul>
                             
 

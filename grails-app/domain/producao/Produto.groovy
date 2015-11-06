@@ -4,11 +4,12 @@ class Produto {
 
 		String nome
 		Double valor
-		Double quantidade
 		static belongsTo = [unidadeMedida:Medida,setorProducao:Setor]
 	
 		String toString(){
-		this.nome
+			this.nome 
+			//+ "-" + this.setorProducao.nome
+			
 	}		
 
 

@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'solicitacao.label', default: 'Solicitação')}" />
+		<g:set var="entityName" value="${message(code: 'solicitacao.label', default: 'Solicitacao')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -71,7 +71,7 @@
 			
 				<g:if test="${solicitacaoInstance?.dataSolicitacao}">
 				<li class="fieldcontain">
-					<span id="dataSolicitacao-label" class="property-label"><g:message code="solicitacao.dataSolicitacao.label" default="Data Solicitacao" /></span>
+					<span id="dataSolicitacao-label" class="property-label"><g:message code="solicitacao.dataSolicitacao.label" default="Data Solicitação" /></span
 					
 						<span class="property-value" aria-labelledby="dataSolicitacao-label"><g:formatDate date="${solicitacaoInstance?.dataSolicitacao}" /></span>
 					

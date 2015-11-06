@@ -31,19 +31,10 @@
 
 <div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'setorProducao', 'error')} required">
 	<label for="setorProducao">
-		<g:message code="produto.setorProducao.label" default="Setor Producao" />
+		<g:message code="produto.setorProducao.label" default="Setor Produção" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="setorProducao" name="setorProducao.id" from="${producao.Setor.list()}" optionKey="id" required="" value="${produtoInstance?.setorProducao?.id}" class="many-to-one"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: produtoInstance, field: 'quantidade', 'error')} required">
-	<label for="quantidade">
-		<g:message code="produto.quantidade.label" default="Quantidade" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="quantidade" value="${fieldValue(bean: produtoInstance, field: 'quantidade')}" required=""/>
 
 </div>
 

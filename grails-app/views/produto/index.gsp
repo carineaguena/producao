@@ -30,9 +30,7 @@
 					
 						<th><g:message code="produto.unidadeMedida.label" default="Unidade Medida" /></th>
 					
-						<th><g:message code="produto.setorProducao.label" default="Setor Producao" /></th>
-					
-						<g:sortableColumn property="quantidade" title="${message(code: 'produto.quantidade.label', default: 'Quantidade')}" />
+						<th><g:message code="produto.setorProducao.label" default="Setor Produção" /></th>
 					
 					</tr>
 				</thead>
@@ -47,8 +45,6 @@
 						<td>${fieldValue(bean: produtoInstance, field: "unidadeMedida")}</td>
 					
 						<td>${fieldValue(bean: produtoInstance, field: "setorProducao")}</td>
-					
-						<td>${fieldValue(bean: produtoInstance, field: "quantidade")}</td>
 					
 					</tr>
 				</g:each>

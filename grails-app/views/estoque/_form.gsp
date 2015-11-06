@@ -31,19 +31,19 @@
 
 <div class="fieldcontain ${hasErrors(bean: estoqueInstance, field: 'setorDeOrigemDoProduto', 'error')} required">
 	<label for="setorDeOrigemDoProduto">
-		<g:message code="estoque.setorDeOrigemDoProduto.label" default="Setor De Origem Do Produto" />
+		<g:message code="estoque.setorDeOrigemDoProduto.label" default="Setor" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="setorDeOrigemDoProduto" name="setorDeOrigemDoProduto.id" from="${producao.Setor.list()}" optionKey="id" required="" value="${estoqueInstance?.setorDeOrigemDoProduto?.id}" class="many-to-one"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: estoqueInstance, field: 'dataDaMovimentação', 'error')} required">
-	<label for="dataDaMovimentação">
-		<g:message code="estoque.dataDaMovimentação.label" default="Data Da Movimentação" />
+<div class="fieldcontain ${hasErrors(bean: estoqueInstance, field: 'dataDaMovimentacao', 'error')} required">
+	<label for="dataDaMovimentacao">
+		<g:message code="estoque.dataDaMovimentação.label" default="Data Da Movimentacao" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="dataDaMovimentação" precision="day"  value="${estoqueInstance?.dataDaMovimentação}"  />
+	<g:datePicker name="dataDaMovimentacao" precision="day"  value="${estoqueInstance?.dataDaMovimentacao}"  />
 
 </div>
 

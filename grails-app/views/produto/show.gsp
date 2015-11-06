@@ -60,15 +60,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${produtoInstance?.quantidade}">
-				<li class="fieldcontain">
-					<span id="quantidade-label" class="property-label"><g:message code="produto.quantidade.label" default="Quantidade" /></span>
-					
-						<span class="property-value" aria-labelledby="quantidade-label"><g:fieldValue bean="${produtoInstance}" field="quantidade"/></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form url="[resource:produtoInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

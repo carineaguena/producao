@@ -53,18 +53,18 @@
 			
 				<g:if test="${estoqueInstance?.setorDeOrigemDoProduto}">
 				<li class="fieldcontain">
-					<span id="setorDeOrigemDoProduto-label" class="property-label"><g:message code="estoque.setorDeOrigemDoProduto.label" default="Setor De Origem Do Produto" /></span>
+					<span id="setorDeOrigemDoProduto-label" class="property-label"><g:message code="estoque.setorDeOrigemDoProduto.label" default="Setor" /></span>
 					
 						<span class="property-value" aria-labelledby="setorDeOrigemDoProduto-label"><g:link controller="setor" action="show" id="${estoqueInstance?.setorDeOrigemDoProduto?.id}">${estoqueInstance?.setorDeOrigemDoProduto?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${estoqueInstance?.dataDaMovimentação}">
+				<g:if test="${estoqueInstance?.dataDaMovimentacao}">
 				<li class="fieldcontain">
-					<span id="dataDaMovimentação-label" class="property-label"><g:message code="estoque.dataDaMovimentação.label" default="Data Da Movimentação" /></span>
+					<span id="dataDaMovimentacao-label" class="property-label"><g:message code="estoque.dataDaMovimentaca.label" default="Data Da Movimentação" /></span>
 					
-						<span class="property-value" aria-labelledby="dataDaMovimentação-label"><g:formatDate date="${estoqueInstance?.dataDaMovimentação}" /></span>
+						<span class="property-value" aria-labelledby="dataDaMovimentacao-label"><g:formatDate date="${estoqueInstance?.dataDaMovimentacao}" /></span>
 					
 				</li>
 				</g:if>
