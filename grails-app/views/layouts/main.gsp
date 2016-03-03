@@ -31,7 +31,7 @@
             
           
             
-            <div class="page-header">
+            <div class="page-header" style="margin-top: 0px;">
 
               <a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a>
               

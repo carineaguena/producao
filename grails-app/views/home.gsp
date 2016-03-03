@@ -21,7 +21,7 @@
 										<!-- Para adicionar os controles na tela de navegação -->
 
 
-                                 <li role="presentation" class="active"> <g:link controller="home"><span class="icon icon-home" aria-hidden="true"></span> Home</g:link></li>
+                                 <li role="presentation" class="active" style="padding-left:15px"> <g:link controller="home"><span class="icon icon-home" aria-hidden="true"></span> Home</g:link></li>
                                  <g:if test="${session.usuario}">
 
 
@@ -60,6 +60,7 @@
       					<div class="container">
         					<h1>Bem-Vindo!</h1>
         					<p>Este é o sistema de controle de produção agropecuária do Instituto Federal Catarinense.</p>
+        					<asset:image src="ifc.png" alt="Grails"/>
         				
       					</div>
     				</div>
