@@ -51,6 +51,15 @@
 				<!--Para testar se o usuário está logado no sistema-->
 				<g:if test="${session.usuario}">
 				<!--o que mostrar para o usuário já logado-->
+                <div class="container">
+                      
+                            
+                           <center>
+                                <h2 style="color:#006400">Sistema de Registro de Produção do IFC-Camboriú - SISPROD</h2>
+                                <asset:image src="pen.png" alt="Grails"/>
+                            </center>
+                        
+                        </div>
 
 				</g:if>				
                 <g:else>
@@ -59,6 +68,7 @@
 
       					<div class="container">
         					<h1>Bem-Vindo!</h1>
+                            <h2 style="color:#006400">Sistema de Registro de Produção do IFC-Camboriú - SISPROD</h2>
         					<p>Este é o sistema de controle de produção agropecuária do Instituto Federal Catarinense.</p>
         					<asset:image src="ifc.png" alt="Grails"/>
         				

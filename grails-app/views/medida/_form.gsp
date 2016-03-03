@@ -2,7 +2,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: medidaInstance, field: 'descricao', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: medidaInstance, field: 'descricao', 'error')} required" style="padding-left:15px">
 	<label for="descricao">
 		<g:message code="medida.descricao.label" default="Descricao" />
 		<span class="required-indicator">*</span>
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: medidaInstance, field: 'tipo', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: medidaInstance, field: 'tipo', 'error')} required" style="padding-left:15px">
 	<label for="tipo">
 		<g:message code="medida.tipo.label" default="Tipo" />
 		<span class="required-indicator">*</span>

@@ -2,7 +2,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'setorOrigem', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'setorOrigem', 'error')} required" style="padding-left:15px">
 	<label for="setorOrigem">
 		<g:message code="movimentacao.setorOrigem.label" default="Setor Origem" />
 		<span class="required-indicator">*</span>
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'setorDestino', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'setorDestino', 'error')} required" style="padding-left:15px">
 	<label for="setorDestino">
 		<g:message code="movimentacao.setorDestino.label" default="Setor Destino" />
 		<span class="required-indicator">*</span>
@@ -20,7 +20,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'nomeProduto', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'nomeProduto', 'error')} required" style="padding-left:15px">
 	<label for="nomeProduto">
 		<g:message code="movimentacao.nomeProduto.label" default="Nome Produto" />
 		<span class="required-indicator">*</span>
@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'quantidade', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'quantidade', 'error')} required" style="padding-left:15px">
 	<label for="quantidade">
 		<g:message code="movimentacao.quantidade.label" default="Quantidade" />
 		<span class="required-indicator">*</span>
@@ -38,7 +38,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'dataMovimentacao', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: movimentacaoInstance, field: 'dataMovimentacao', 'error')} required" style="padding-left:15px">
 	<label for="dataMovimentacao">
 		<g:message code="movimentacao.dataMovimentacao.label" default="Data Movimentacao" />
 		<span class="required-indicator">*</span>

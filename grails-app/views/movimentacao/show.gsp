@@ -4,20 +4,20 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'movimentacao.label', default: 'Movimentação')}" />
+		<g:set var="entityName" value="${message(code: 'movimentacao.label', default: 'Movimentacao')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
             
             
 		<div class="nav" role="navigation">
-			<ul class="nav nav-tabs nav-justified">
+			<ul class="nav nav-tabs nav-justified" style="padding-left:15px">
 				<li role="presentation" class="active"><a class="home" href="${createLink(uri: '/')}"><span class="icon icon-home" aria-hidden="true"></span> <g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="index"><span class="icon icon-list" aria-hidden="true"></span> <g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><span class="icon icon-plus" aria-hidden="true"></span> <g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<div id="show-movimentacao" class="content scaffold-show" role="main">
+		<div id="show-movimentacao" class="content scaffold-show" role="main" style="padding-left:15px">
 			<h3><g:message code="default.show.label" args="[entityName]" /></h3>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
@@ -64,7 +64,7 @@
 				<li class="fieldcontain">
 					<span id="dataMovimentacao-label" class="property-label"><g:message code="movimentacao.dataMovimentacao.label" default="Data Movimentacao" /></span>
 					
-						<span class="property-value" aria-labelledby="dataMovimentacao-label"><g:formatDate date="${movimentacaoInstance?.dataMovimentacao}" /></span>
+						<span class="property-value" aria-labelledby="dataMovimentacao-label"><g:formatDate format="dd/MM/yyyy" date="${movimentacaoInstance?.dataMovimentacao}" /></span>
 					
 				</li>
 				</g:if>

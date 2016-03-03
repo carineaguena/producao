@@ -2,7 +2,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'nomeProduto', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'nomeProduto', 'error')} required" style="padding-left:15px">
 	<label for="nomeProduto">
 		<g:message code="solicitacao.nomeProduto.label" default="Nome Produto" />
 		<span class="required-indicator">*</span>
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'unidadeMedida', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'unidadeMedida', 'error')} required" style="padding-left:15px">
 	<label for="unidadeMedida">
 		<g:message code="solicitacao.unidadeMedida.label" default="Unidade Medida" />
 		<span class="required-indicator">*</span>
@@ -20,7 +20,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'quantidade', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'quantidade', 'error')} required" style="padding-left:15px">
 	<label for="quantidade">
 		<g:message code="solicitacao.quantidade.label" default="Quantidade" />
 		<span class="required-indicator">*</span>
@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'setorSolicitante', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'setorSolicitante', 'error')} required" style="padding-left:15px">
 	<label for="setorSolicitante">
 		<g:message code="solicitacao.setorSolicitante.label" default="Setor Solicitante" />
 		<span class="required-indicator">*</span>
@@ -38,7 +38,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'setorSolicitado', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'setorSolicitado', 'error')} required" style="padding-left:15px">
 	<label for="setorSolicitado">
 		<g:message code="solicitacao.setorSolicitado.label" default="Setor Solicitado" />
 		<span class="required-indicator">*</span>
@@ -47,7 +47,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'dataSolicitacao', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'dataSolicitacao', 'error')} required" style="padding-left:15px">
 	<label for="dataSolicitacao">
 		<g:message code="solicitacao.dataSolicitacao.label" default="Data Solicitacao" />
 		<span class="required-indicator">*</span>
@@ -56,7 +56,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'email', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'email', 'error')} required" style="padding-left:15px">
 	<label for="email">
 		<g:message code="solicitacao.email.label" default="Email" />
 		<span class="required-indicator">*</span>
@@ -65,12 +65,16 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">
+
+	<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required" style="padding-left:15px">
 	<label for="status">
 		<g:message code="solicitacao.status.label" default="Status" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="status" from="${['Solicitado', 'Atendido', 'Recusado']}" required="" value="${solicitacaoInstance?.status}"/>
+
+</div>
+
 
 </div>
 

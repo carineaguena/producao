@@ -2,7 +2,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: setorInstance, field: 'nome', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: setorInstance, field: 'nome', 'error')} required" style="padding-left:15px">
 	<label for="nome">
 		<g:message code="setor.nome.label" default="Nome" />
 		<span class="required-indicator">*</span>

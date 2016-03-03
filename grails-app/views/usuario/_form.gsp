@@ -2,7 +2,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'login', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'login', 'error')} required" style="padding-left:15px">
 	<label for="login">
 		<g:message code="usuario.login.label" default="Login" />
 		<span class="required-indicator">*</span>
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'password', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'password', 'error')} required" style="padding-left:15px">
 	<label for="password">
 		<g:message code="usuario.password.label" default="Password" />
 		<span class="required-indicator">*</span>
@@ -20,8 +20,8 @@
 
 </div>
 
-
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'password', 'error')} required">
+ 
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'password', 'error')} required" style="padding-left:15px">
 	<label for="confirmacao">
 		<g:message code="usuario.confirmacao.label" default="Confirme a Password" />
 		<span class="required-indicator">*</span>
@@ -32,7 +32,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'name', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'name', 'error')} required" style="padding-left:15px">
 	<label for="name">
 		<g:message code="usuario.name.label" default="Name" />
 		<span class="required-indicator">*</span>

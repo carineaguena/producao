@@ -2,7 +2,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'siape', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'siape', 'error')} required" style="padding-left:15px">
 	<label for="siape">
 		<g:message code="servidor.siape.label" default="Siape" />
 		<span class="required-indicator">*</span>
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'nome', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'nome', 'error')} required" style="padding-left:15px">
 	<label for="nome">
 		<g:message code="servidor.nome.label" default="Nome" />
 		<span class="required-indicator">*</span>
@@ -20,7 +20,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'email', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'email', 'error')} required" style="padding-left:15px">
 	<label for="email">
 		<g:message code="servidor.email.label" default="Email" />
 		<span class="required-indicator">*</span>
@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'ramal', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'ramal', 'error')} required" style="padding-left:15px">
 	<label for="ramal">
 		<g:message code="servidor.ramal.label" default="Ramal" />
 		<span class="required-indicator">*</span>
@@ -38,7 +38,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'cargo', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'cargo', 'error')} required" style="padding-left:15px">
 	<label for="cargo">
 		<g:message code="servidor.cargo.label" default="Cargo" />
 		<span class="required-indicator">*</span>
@@ -47,7 +47,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'setor', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: servidorInstance, field: 'setor', 'error')} required" style="padding-left:15px">
 	<label for="setor">
 		<g:message code="servidor.setor.label" default="Setor" />
 		<span class="required-indicator">*</span>
@@ -55,6 +55,4 @@
 	<g:select id="setor" name="setor.id" from="${producao.Setor.list()}" optionKey="id" required="" value="${servidorInstance?.setor?.id}" class="many-to-one"/>
 
 </div>
-
-
 

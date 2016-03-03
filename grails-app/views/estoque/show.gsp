@@ -11,13 +11,13 @@
             
             
 		<div class="nav" role="navigation">
-			<ul class="nav nav-tabs nav-justified">
+			<ul class="nav nav-tabs nav-justified" style="padding-left:15px">
 				<li role="presentation" class="active"><a class="home" href="${createLink(uri: '/')}"><span class="icon icon-home" aria-hidden="true"></span> <g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="index"><span class="icon icon-list" aria-hidden="true"></span> <g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><span class="icon icon-plus" aria-hidden="true"></span> <g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<div id="show-estoque" class="content scaffold-show" role="main">
+		<div id="show-estoque" class="content scaffold-show" role="main" style="padding-left:15px">
 			<h3><g:message code="default.show.label" args="[entityName]" /></h3>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
@@ -53,7 +53,7 @@
 			
 				<g:if test="${estoqueInstance?.setorDeOrigemDoProduto}">
 				<li class="fieldcontain">
-					<span id="setorDeOrigemDoProduto-label" class="property-label"><g:message code="estoque.setorDeOrigemDoProduto.label" default="Setor" /></span>
+					<span id="setorDeOrigemDoProduto-label" class="property-label"><g:message code="estoque.setorDeOrigemDoProduto.label" default="Setor De Origem Do Produto" /></span>
 					
 						<span class="property-value" aria-labelledby="setorDeOrigemDoProduto-label"><g:link controller="setor" action="show" id="${estoqueInstance?.setorDeOrigemDoProduto?.id}">${estoqueInstance?.setorDeOrigemDoProduto?.encodeAsHTML()}</g:link></span>
 					
@@ -62,9 +62,9 @@
 			
 				<g:if test="${estoqueInstance?.dataDaMovimentacao}">
 				<li class="fieldcontain">
-					<span id="dataDaMovimentacao-label" class="property-label"><g:message code="estoque.dataDaMovimentaca.label" default="Data Da Movimentação" /></span>
+					<span id="dataDaMovimentacao-label" class="property-label"><g:message code="estoque.dataDaMovimentacao.label" default="Data Da Movimentacao" /></span>
 					
-						<span class="property-value" aria-labelledby="dataDaMovimentacao-label"><g:formatDate date="${estoqueInstance?.dataDaMovimentacao}" /></span>
+						<span class="property-value" aria-labelledby="dataDaMovimentacao-label"><g:formatDate format="dd/MM/yyyy" date="${estoqueInstance?.dataDaMovimentacao}" /></span>
 					
 				</li>
 				</g:if>
