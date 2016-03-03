@@ -58,8 +58,9 @@ section {
   margin-top:5px;
   background-color: #096318;
   margin-top:0px;
-  color:#FFFFFF;
-  font-family:'Georgia';
+  margin-bottom: 100px;
+  color:#006400;
+  font-family:"HelveticaNeue-Light";
  }
 
 .footer {

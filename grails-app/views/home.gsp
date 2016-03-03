@@ -6,11 +6,11 @@
 		
 	</head>
 	<body>
-		
+	
 		<div id="page-body" role="main">
                     
                         
-                    <div class="nav" role="navigation">
+             <div class="nav" role="navigation">
 
 				<ul class="nav nav-tabs nav-justified">
                                    

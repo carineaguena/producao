@@ -18,8 +18,9 @@
                 <asset:stylesheet src="bootstrap.min.css"/>
                 <asset:stylesheet src="bootstrap-responsive.css"/>
                 <asset:stylesheet src="bootstrap-responsive.min.css"/>
-		<asset:javascript src="bootstrap.js"/>
+		            <asset:javascript src="bootstrap.js"/>
                 <asset:javascript src="bootstrap.min.js"/>
+
 		<g:layoutHead/>
              
             
@@ -31,10 +32,15 @@
           
             
             <div class="page-header">
+
               <a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a>
-              <br><br><br></div>
-          </div>
+              
+              <br><br><br>
+
+            </div>
             <div class="login-header"> <span class="icon icon-user" aria-hidden="true"></span> <g:loginControl /> </div>
+          </div>
+           
              
 		<g:layoutBody/>
                 
