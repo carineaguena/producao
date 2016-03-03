@@ -20,6 +20,18 @@
 
 </div>
 
+
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'password', 'error')} required">
+	<label for="confirmacao">
+		<g:message code="usuario.confirmacao.label" default="Confirme a Password" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="password" name="confirmacao" required="" id="confirmacao"/>
+
+</div>
+
+
+
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'name', 'error')} required">
 	<label for="name">
 		<g:message code="usuario.name.label" default="Name" />

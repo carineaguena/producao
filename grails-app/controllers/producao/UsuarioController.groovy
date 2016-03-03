@@ -26,10 +26,14 @@ class UsuarioController {
     @Transactional
     
     def save(Usuario userInstance) {
+        if (params.confirmacao == userInstance.password){
+
         if (userInstance == null) {
             notFound()
             return
         }
+
+
 
         if (userInstance.hasErrors()) {
             respond userInstance.errors, view:'create'
@@ -47,7 +51,48 @@ class UsuarioController {
             }
             '*' { respond userInstance, [status: CREATED] }
         }
+      }
+      else{ 
+          flash.message = "Desculpe, as senhas não são iguais. Por favor, tente novamente."
+          redirect(action: "create")
+        }
+  }
+
+  @Transactional
+    def update(Usuario userInstance) {
+
+      if (params.confirmacao == userInstance.password){
+
+
+        if (userInstance == null) {
+            notFound()
+            return
+        }
+
+        if (userInstance.hasErrors()) {
+            respond medidaInstance.errors, view:'edit'
+            return
+        }
+
+      userInstance.password = userInstance.password.encodeAsPassword()        
+
+      userInstance.save flush:true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+                redirect userInstance
+            }
+            '*'{ respond medidaInstance, [status: OK] }
+        }
     }
+    else{ 
+          flash.message = "Desculpe, as senhas não são iguais. Por favor, tente novamente."
+          redirect(action: "edit", id: userInstance.id)
+        }
+
+
+  }
 
 
 

@@ -21,7 +21,6 @@
 										<!-- Para adicionar os controles na tela de navegação -->
 
 
-
                                     <li role="presentation" class="active"> <g:link controller="home"><span class="icon icon-home" aria-hidden="true"></span> Home</g:link></li>
                                     <g:if test="${session.usuario}">
 
@@ -40,12 +39,13 @@
 
 
 				</ul> 
-
+				<!--Para testar se o usuário está logado no sistema-->
 				<g:if test="${session.usuario}">
+				<!--o que mostrar para o usuário já logado-->
 
-
-				</g:if>
+				</g:if>				
                 <g:else>
+                <!--se ele não estiver logado mostrar aqui-->
                 	<div class="jumbotron">
 
       					<div class="container">
