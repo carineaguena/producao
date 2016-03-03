@@ -5,11 +5,26 @@ import grails.transaction.Transactional
 
 class UsuarioController {
 
-  def scaffold = Usuario
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-  def login = {}
+    def scaffold = Usuario
+
+  // def login = {}
+
+  //controle de autenticacao (deve ser colocado em todos os controles que deseja proteger)
+    def beforeInterceptor = [action:this.&auth]
+        
+    def auth() {
+        if(!session.usuario) {
+            redirect(controller:"autentica", action:"login")
+            return false
+        }
+    }
+
+    //copiar até aqui 
   
     @Transactional
+    
     def save(Usuario userInstance) {
         if (userInstance == null) {
             notFound()
@@ -34,7 +49,10 @@ class UsuarioController {
         }
     }
 
-  def authenticate = {
+
+
+
+/*  def authenticate = {
     def passwordHashed = params.password.encodeAsPassword()
     def usuario = Usuario.findByLoginAndPassword(params.login, passwordHashed)
     //def usuario = Usuario.findByLoginAndPassword(params.login, params.password)
@@ -54,7 +72,7 @@ class UsuarioController {
     session.usuario = null
     //desloga e manda para a pagina inicial do servidor
     render(view:"/home")
-  }
+  }*/
   
  
 }

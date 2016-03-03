@@ -28,7 +28,7 @@ class SolicitacaoController {
         
     def auth() {
         if(!session.usuario) {
-            redirect(controller:"usuario", action:"login")
+            redirect(controller:"autentica", action:"login")
             return false
         }
     }
@@ -79,15 +79,12 @@ class SolicitacaoController {
 
         if (solicitacaoInstance.status == "Atendido"){
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 054c638f87451db89d48afbe35c4b8371980c2b7
             String hql = "select est from Estoque est where est.setorDeOrigemDoProduto = :setor " +
                 " AND est.nomeProduto = :nomeProduto"
 
             def result = Estoque.executeQuery(hql, [setor:solicitacaoInstance.setorSolicitado, nomeProduto:solicitacaoInstance.nomeProduto])
-<<<<<<< HEAD
+
             def Double valorBanco = result[0].quantidade
             def Double valorDigitado = solicitacaoInstance.quantidade.toDouble()
             def resultado = valorBanco - valorDigitado
@@ -145,7 +142,7 @@ class SolicitacaoController {
         }
         else{
             solicitacaoInstance.save flush:true
-=======
+
             Double aa = result[0].quantidade
             Double bb = solicitacaoInstance.quantidade.toDouble()
            // render(result.quantidade+" -+= "+solicitacaoInstance.quantidade+" "+(aa - bb))
@@ -160,8 +157,7 @@ class SolicitacaoController {
           
 
            Estoque.executeUpdate("update Estoque set quantidade = :resultado where nomeProduto = :nomeProduto and setorDeOrigemDoProduto = :setorDeOrigemDoProduto", [resultado:resultado, nomeProduto:result.nomeProduto, setorDeOrigemDoProduto:result.setorDeOrigemDoProduto])
-            
->>>>>>> 054c638f87451db89d48afbe35c4b8371980c2b7
+
         }
 
         //até aqui

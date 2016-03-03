@@ -28,7 +28,7 @@ class SetorController {
         
     def auth() {
         if(!session.usuario) {
-            redirect(controller:"usuario", action:"login")
+            redirect(controller:"autentica", action:"login")
             return false
         }
     }

@@ -9,10 +9,10 @@ class LoginTagLib {
         if(session.usuario){
             out << "Olá ${session.usuario.name}, "
             //out << """[${link(action:"logout", controller:"usuario"){"Logout"}}]"""
-            out << g.link(action:"logout", controller:"usuario"){"Logout"}
+            out << g.link(action:"logout", controller:"autentica"){"Logout"}
             
         } else {
-            out << g.link(action:"login", controller:"usuario"){"Login"}
+            out << g.link(action:"login", controller:"autentica"){"Login"}
             }
            
     }
