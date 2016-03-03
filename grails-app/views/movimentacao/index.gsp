@@ -12,7 +12,7 @@
                         
 			<ul class="nav nav-tabs nav-justified">
 				<li role="presentation" class="active"><a class="home" href="${createLink(uri: '/')}"> <span class="icon icon-home" aria-hidden="true"></span> <g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><span class="icon icon-plus" aria-hidden="true"></span> <g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<!--<li><g:link class="create" action="create"><span class="icon icon-plus" aria-hidden="true"></span> <g:message code="default.new.label" args="[entityName]" /></g:link></li>-->
 			</ul>
 		</div>
 		<div id="list-movimentacao" class="content scaffold-list" role="main">
