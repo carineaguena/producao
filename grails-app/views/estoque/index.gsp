@@ -48,7 +48,7 @@
 					
 						<td>${fieldValue(bean: estoqueInstance, field: "setorDeOrigemDoProduto")}</td>
 					
-						<td><g:formatDate date="${estoqueInstance.dataDaMovimentacao}" /></td>
+						<td><g:formatDate format="dd-MM-yyyy" date="${estoqueInstance.dataDaMovimentacao}" /></td>
 					
 					</tr>
 				</g:each>
