@@ -46,6 +46,15 @@ class UsuarioController {
         else respond userInstance
     }
 
+    def show(Usuario userInstance) {
+         if(session.usuario.name!="Administrador")
+            {
+               respond session.usuario
+
+             }
+        else respond userInstance
+    }
+
     @Transactional
    /* def update(Produto produtoInstance) {
         if (produtoInstance == null) {
