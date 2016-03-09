@@ -30,6 +30,6 @@ class AutenticaController {
     //flash.message = "Até mais ${session.usuario.name}"
     session.usuario = null
     //desloga e manda para a pagina inicial do servidor
-    render(view:"/home")
+    render(view:'/home')
   }
 }
