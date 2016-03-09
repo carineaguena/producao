@@ -57,7 +57,7 @@
                             
                            <center>
                                 <h2 style="color:#006400">Sistema de Registro de Produção do IFC-Camboriú - SISPROD</h2>
-                                <asset:image src="pen.png" alt="Grails"/>
+                                <asset:image src="prod.png" alt="Grails"/>
                             </center>
                         
                         </div>
