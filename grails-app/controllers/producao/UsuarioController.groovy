@@ -19,20 +19,14 @@ class UsuarioController {
             redirect(controller:"autentica", action:"login")
             return false
         }
-        //controle de permissao de usuarios
-        else if(session.usuario.name!="Administrador")
-            {
-               flash.message = "Desculpe, você não tem permissão para acessar essa página"
-                session.usuario = null
-                redirect(controller:"autentica", action:"login")
-
-             }
+       
     }
 
     //copiar até aqui 
   
     @Transactional
-    
+
+       
     def save(Usuario userInstance) {
         if (params.confirmacao == userInstance.password){
 

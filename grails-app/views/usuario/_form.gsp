@@ -16,7 +16,7 @@
 		<g:message code="usuario.password.label" default="Password" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="password" name="password" required="" value="${usuarioInstance?.password}"/>
+	<g:field type="password" name="password" required="" />
 
 </div>
 
