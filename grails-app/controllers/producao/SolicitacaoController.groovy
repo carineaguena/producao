@@ -84,13 +84,27 @@ class SolicitacaoController {
                 " AND est.nomeProduto = :nomeProduto"
 
             def result = Estoque.executeQuery(hql, [setor:solicitacaoInstance.setorSolicitado, nomeProduto:solicitacaoInstance.nomeProduto])
-
-            def Double valorBanco = result[0].quantidade
-            def Double valorDigitado = solicitacaoInstance.quantidade.toDouble()
+            def Double valorBanco
+            def Double valorDigitado
+            def resultado
+            if(result){
+               valorBanco = result[0].quantidade
+                valorDigitado = solicitacaoInstance.quantidade.toDouble()
+                if(valorBanco - valorDigitado < 0)                    
+                    render '<script type="text/javascript"> alert("A quantidade solicitada é maior que o Estoque!"); location.href="../"</script>'
+                resultado = valorBanco - valorDigitado
+                result[0].quantidade = resultado
+                result[0].save()
+            }else{
+                render '<script type="text/javascript"> alert("Não foi encontrado Estoque para atender essa Solicitação!"); location.href="../"</script>' 
+                //redirect(controller:'solicitacao' action:'index')
+            }
+            
+           /* def Double valorDigitado = solicitacaoInstance.quantidade.toDouble()
             def resultado = valorBanco - valorDigitado
 
             result[0].quantidade = resultado
-            result[0].save()
+            result[0].save()*/
             if(result[0].hasErrors()){
                 render("tem erro")
             }else{
@@ -143,7 +157,7 @@ class SolicitacaoController {
         else{
             solicitacaoInstance.save flush:true
 
-            Double aa = result[0].quantidade
+           /* Double aa = result[0].quantidade
             Double bb = solicitacaoInstance.quantidade.toDouble()
            // render(result.quantidade+" -+= "+solicitacaoInstance.quantidade+" "+(aa - bb))
           
@@ -157,7 +171,7 @@ class SolicitacaoController {
           
 
            Estoque.executeUpdate("update Estoque set quantidade = :resultado where nomeProduto = :nomeProduto and setorDeOrigemDoProduto = :setorDeOrigemDoProduto", [resultado:resultado, nomeProduto:result.nomeProduto, setorDeOrigemDoProduto:result.setorDeOrigemDoProduto])
-
+            */
         }
 
         //até aqui

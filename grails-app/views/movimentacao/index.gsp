@@ -12,7 +12,7 @@
                         
 			<ul class="nav nav-tabs nav-justified" style="padding-left:15px">
 				<li role="presentation" class="active"><a class="home" href="${createLink(uri: '/')}"> <span class="icon icon-home" aria-hidden="true"></span> <g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><span class="icon icon-plus" aria-hidden="true"></span> <g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<!--<li><g:link class="create" action="create"><span class="icon icon-plus" aria-hidden="true"></span> <g:message code="default.new.label" args="[entityName]" /></g:link></li>-->
 			</ul>
 		</div>
 		<div id="list-movimentacao" class="content scaffold-list" role="main" style="padding-left:15px">
@@ -40,8 +40,9 @@
 				<g:each in="${movimentacaoInstanceList}" status="i" var="movimentacaoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${movimentacaoInstance.id}">${fieldValue(bean: movimentacaoInstance, field: "setorOrigem")}</g:link></td>
-					
+						<!--<td><g:link action="show" id="${movimentacaoInstance.id}">${fieldValue(bean: movimentacaoInstance, field: "setorOrigem")}</g:link></td>-->
+						<td>${fieldValue(bean: movimentacaoInstance, field: "setorOrigem")}</td>
+
 						<td>${fieldValue(bean: movimentacaoInstance, field: "setorDestino")}</td>
 					
 						<td>${fieldValue(bean: movimentacaoInstance, field: "nomeProduto")}</td>

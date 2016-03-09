@@ -44,9 +44,17 @@
 				<tbody>
 				<g:each in="${solicitacaoInstanceList}" status="i" var="solicitacaoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+					<g:if test="${session.usuario.name == 'Administrador'}">
 						<td><g:link action="show" id="${solicitacaoInstance.id}">${fieldValue(bean: solicitacaoInstance, field: "nomeProduto")}</g:link></td>
-					
+					</g:if>
+					<g:else>	
+						<g:if test="${solicitacaoInstance.status == 'Atendido' || solicitacaoInstance.status == 'Recusado'}">
+							<td>${fieldValue(bean: solicitacaoInstance, field: "nomeProduto")}</td>
+						</g:if>
+						<g:else>
+							<td><g:link action="show" id="${solicitacaoInstance.id}">${fieldValue(bean: solicitacaoInstance, field: "nomeProduto")}</g:link></td>
+						</g:else>
+					</g:else>
 						<td>${fieldValue(bean: solicitacaoInstance, field: "unidadeMedida")}</td>
 					
 						<td>${fieldValue(bean: solicitacaoInstance, field: "quantidade")}</td>

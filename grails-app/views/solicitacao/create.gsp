@@ -26,8 +26,11 @@
 			</g:hasErrors>
 			<g:form url="[resource:solicitacaoInstance, action:'save']" >
 				<fieldset class="form">
+
 					<g:render template="form"/>
+					<g:hiddenField name="status" value='Solicitado'/>
 				</fieldset>
+
 				<fieldset class="buttons">
 					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
