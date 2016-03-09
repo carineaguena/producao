@@ -7,8 +7,12 @@
 		<g:message code="usuario.login.label" default="Login" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="login" required="" value="${usuarioInstance?.login}"/>
-
+	<g:if test="${session.usuario.name == 'Administrador'}">
+		<g:textField name="login" required="" value="${usuarioInstance?.login}"/>
+	</g:if>
+	<g:else>
+		<g:textField name="login" required="" value="${usuarioInstance?.login}" disabled="true"/>
+	</g:else>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'password', 'error')} required" style="padding-left:15px">
@@ -37,7 +41,11 @@
 		<g:message code="usuario.name.label" default="Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="name" required="" value="${usuarioInstance?.name}"/>
-
+	<g:if test="${session.usuario.name == 'Administrador'}">
+		<g:textField name="name" required="" value="${usuarioInstance?.name}"/>
+	</g:if>
+	<g:else>
+		<g:textField name="name" required="" value="${usuarioInstance?.name}" disabled="true"/>
+	</g:else>
 </div>
 

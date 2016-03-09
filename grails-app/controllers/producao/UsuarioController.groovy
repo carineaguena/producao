@@ -26,6 +26,51 @@ class UsuarioController {
   
     @Transactional
 
+    def create() {
+      if(session.usuario.name!="Administrador")
+            {
+               flash.message = "Desculpe, você não tem permissão para acessar essa página"
+                session.usuario = null
+                redirect(controller:"autentica", action:"login")
+
+             }
+        else respond new Usuario(params)
+    }
+
+    def edit(Usuario userInstance) {
+       if(session.usuario.name!="Administrador")
+            {
+               respond session.usuario
+
+             }
+        else respond userInstance
+    }
+
+    @Transactional
+   /* def update(Produto produtoInstance) {
+        if (produtoInstance == null) {
+            notFound()
+            return
+        }
+
+        if (produtoInstance.hasErrors()) {
+            respond produtoInstance.errors, view:'edit'
+            return
+        }
+
+        produtoInstance.save flush:true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Produto.label', default: 'Produto'), produtoInstance.id])
+                redirect produtoInstance
+            }
+            '*'{ respond produtoInstance, [status: OK] }
+        }
+    }*/
+
+
+
        
     def save(Usuario userInstance) {
         if (params.confirmacao == userInstance.password){
