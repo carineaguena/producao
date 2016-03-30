@@ -12,7 +12,7 @@ class ServidorController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Servidor.list(params), model:[servidorInstanceCount: Servidor.count()]
+        respond Servidor.list(sort:"nome", order:"asc"), model:[servidorInstanceCount: Servidor.count()]
     }
 
     def show(Servidor servidorInstance) {

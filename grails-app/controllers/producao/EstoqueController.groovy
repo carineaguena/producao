@@ -12,7 +12,7 @@ class EstoqueController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Estoque.list(params), model:[estoqueInstanceCount: Estoque.count()]
+        respond Estoque.list(sort:"nomeProduto", order:"asc"), model:[estoqueInstanceCount: Estoque.count()]
     }
 
     def show(Estoque estoqueInstance) {

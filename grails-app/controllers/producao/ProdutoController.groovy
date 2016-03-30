@@ -12,10 +12,12 @@ class ProdutoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Produto.list(params), model:[produtoInstanceCount: Produto.count()]
+        respond Produto.list(sort:"nome", order:"asc"), model:[produtoInstanceCount: Produto.count()]
+
     }
 
     def show(Produto produtoInstance) {
+
         respond produtoInstance
     }
 

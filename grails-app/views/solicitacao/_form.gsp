@@ -7,7 +7,7 @@
 		<g:message code="solicitacao.nomeProduto.label" default="Nome Produto" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="nomeProduto" name="nomeProduto.id" from="${producao.Produto.list()}" optionKey="id" required="" value="${solicitacaoInstance?.nomeProduto?.id}" class="many-to-one"/>
+	<g:select id="nomeProduto" name="nomeProduto.id" from="${producao.Produto.list(sort:"nome", order:"asc")}" optionKey="id" required="" value="${solicitacaoInstance?.nomeProduto?.id}" class="many-to-one"/>
 
 </div>
 
@@ -34,7 +34,7 @@
 		<g:message code="solicitacao.setorSolicitante.label" default="Setor Solicitante" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="setorSolicitante" name="setorSolicitante.id" from="${producao.Setor.list()}" optionKey="id" required="" value="${solicitacaoInstance?.setorSolicitante?.id}" class="many-to-one"/>
+	<g:select id="setorSolicitante" name="setorSolicitante.id" from="${producao.Setor.list(sort:"nome", order:"asc")}" optionKey="id" required="" value="${solicitacaoInstance?.setorSolicitante?.id}" class="many-to-one"/>
 
 </div>
 
@@ -43,7 +43,7 @@
 		<g:message code="solicitacao.setorSolicitado.label" default="Setor Solicitado" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="setorSolicitado" name="setorSolicitado.id" from="${producao.Setor.list()}" optionKey="id" required="" value="${solicitacaoInstance?.setorSolicitado?.id}" class="many-to-one"/>
+	<g:select id="setorSolicitado" name="setorSolicitado.id" from="${producao.Setor.list(sort:"nome", order:"asc")}" optionKey="id" required="" value="${solicitacaoInstance?.setorSolicitado?.id}" class="many-to-one"/>
 
 </div>
 

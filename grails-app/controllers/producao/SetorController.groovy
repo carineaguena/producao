@@ -12,7 +12,7 @@ class SetorController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Setor.list(params), model:[setorInstanceCount: Setor.count()]
+        respond Setor.list(sort:"nome", order:"asc"), model:[setorInstanceCount: Setor.count()]
     }
 
     def show(Setor setorInstance) {

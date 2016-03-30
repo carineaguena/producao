@@ -12,7 +12,7 @@ class MovimentacaoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Movimentacao.list(params), model:[movimentacaoInstanceCount: Movimentacao.count()]
+        respond Movimentacao.list(sort:"nomeProduto", order:"asc"), model:[movimentacaoInstanceCount: Movimentacao.count()]
     }
 
     def show(Movimentacao movimentacaoInstance) {

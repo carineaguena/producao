@@ -12,7 +12,7 @@ class MedidaController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Medida.list(params), model:[medidaInstanceCount: Medida.count()]
+        respond Medida.list(sort:"descricao", order:"asc"), model:[medidaInstanceCount: Medida.count()]
     }
 
     def show(Medida medidaInstance) {

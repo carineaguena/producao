@@ -12,7 +12,7 @@ class SolicitacaoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Solicitacao.list(params), model:[solicitacaoInstanceCount: Solicitacao.count()]
+        respond Solicitacao.list(sort:"nomeProduto", order:"asc"), model:[solicitacaoInstanceCount: Solicitacao.count()]
     }
 
     def show(Solicitacao solicitacaoInstance) {

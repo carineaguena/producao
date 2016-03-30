@@ -16,7 +16,7 @@
 		<g:message code="movimentacao.setorDestino.label" default="Setor Destino" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="setorDestino" name="setorDestino.id" from="${producao.Setor.list()}" optionKey="id" required="" value="${movimentacaoInstance?.setorDestino?.id}" class="many-to-one"/>
+	<g:select id="setorDestino" name="setorDestino.id" from="${producao.Setor.list(sort:"nome", order:"asc")}" optionKey="id" required="" value="${movimentacaoInstance?.setorDestino?.id}" class="many-to-one"/>
 
 </div>
 
@@ -25,7 +25,7 @@
 		<g:message code="movimentacao.nomeProduto.label" default="Nome Produto" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="nomeProduto" name="nomeProduto.id" from="${producao.Produto.list()}" optionKey="id" required="" value="${movimentacaoInstance?.nomeProduto?.id}" class="many-to-one"/>
+	<g:select id="nomeProduto" name="nomeProduto.id" from="${producao.Produto.list(sort:"nome", order:"asc")}" optionKey="id" required="" value="${movimentacaoInstance?.nomeProduto?.id}" class="many-to-one"/>
 
 </div>
 

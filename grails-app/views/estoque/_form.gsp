@@ -25,7 +25,7 @@
 		<g:message code="estoque.nomeProduto.label" default="Nome Produto" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="nomeProduto" name="nomeProduto.id" from="${producao.Produto.list()}" optionKey="id" required="" value="${estoqueInstance?.nomeProduto?.id}" class="many-to-one"/>
+	<g:select id="nomeProduto" name="nomeProduto.id" from="${producao.Produto.list(sort:"nome", order:"asc")}" optionKey="id" required="" value="${estoqueInstance?.nomeProduto?.id}" class="many-to-one"/>
 
 </div>
 
@@ -34,7 +34,7 @@
 		<g:message code="estoque.setorDeOrigemDoProduto.label" default="Setor De Origem Do Produto" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="setorDeOrigemDoProduto" name="setorDeOrigemDoProduto.id" from="${producao.Setor.list()}" optionKey="id" required="" value="${estoqueInstance?.setorDeOrigemDoProduto?.id}" class="many-to-one"/>
+	<g:select id="setorDeOrigemDoProduto" name="setorDeOrigemDoProduto.id" from="${producao.Setor.list(sort:"nome", order:"asc")}" optionKey="id" required="" value="${estoqueInstance?.setorDeOrigemDoProduto?.id}" class="many-to-one"/>
 
 </div>
 

@@ -12,7 +12,7 @@ class CargoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Cargo.list(params), model:[cargoInstanceCount: Cargo.count()]
+        respond Cargo.list(sort:"nome", order:"asc"), model:[cargoInstanceCount: Cargo.count()]
     }
 
     def show(Cargo cargoInstance) {
